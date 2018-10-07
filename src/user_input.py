@@ -30,24 +30,24 @@ timeout_delay = 200
 
 power = 1
 
-key_mappings = {119:    {0: 1, 1: 1},   # w - forward
+key_mappings = {119:    {0: 1, 1: -1},   # w - forward
                 97:     {2: -1, 3: -1}, # a - strafe left
-                115:    {0: -1, 1: -1}, # s - reverse
+                115:    {0: -1, 1: 1}, # s - reverse
                 100:    {2: 1, 3: 1},   # d - strafe right
-                113:    {2: -1, 3: 1},  # q - rotate left
-                101:    {2: 1, 3: -1},  # e - rotate right
-                99:     {4: -1, 5: -1, 6: -1, 7: -1}, # c - descend
-                32:     {4: 1, 5: 1, 6: 1, 7: 1}, # space - ascend
+                113:    {2: 1, 3: -1},  # q - rotate left
+                101:    {2: -1, 3: 1},  # e - rotate right
+                99:     {4: 1, 5: -1, 6: -1, 7: 1}, # c - descend
+                32:     {4: -1, 5: 1, 6: 1, 7: -1}, # space - ascend
                 120:    {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0}, # x - stop all
                 116:    {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}, # t - start all
                 49:     {0: 1}, # 1 - port forward
-                50:     {1: 1}, # 2 - starboard forward
-                51:     {2: 1}, # 3 - fore strafe
-                52:     {3: 1}, # 4 - aft strafe
-                53:     {4: 1}, # 5 - port fore depth
+                50:     {1: -1}, # 2 - starboard forward
+                51:     {2: -1}, # 3 - fore strafe
+                52:     {3: -1}, # 4 - aft strafe
+                53:     {4: -1}, # 5 - port fore depth
                 54:     {5: 1}, # 6 - starboard fore depth
                 55:     {6: 1}, # 7 - port aft depth
-                56:     {7: 1}} # 7 - starboard aft depth
+                56:     {7: -1}} # 7 - starboard aft depth
 
 ## End Variables
 
