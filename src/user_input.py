@@ -3,7 +3,7 @@
 import rospy, math
 from datetime import datetime # not used
 from robosub2018.msg import Key
-from robosub2018.msg import MotorCommands as MC
+from robosub2018.msg import MotorCommands
 from std_msgs.msg import Bool # not used
 
 
@@ -96,7 +96,7 @@ def main():
     rospy.Subscriber("keyboard/keydown", Key, key_down)
     rospy.Subscriber("keyboard/keyup", Key, key_up)
 
-    com_pub = Publisher("command/motor", MotorCommands, queue_size=32)
+    com_pub = rospy.Publisher("command/motor", MotorCommands, queue_size=32)
 
     com_msg = MotorCommands()
     com_msg.header.seq = 0

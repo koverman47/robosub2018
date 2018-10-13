@@ -17,8 +17,8 @@ int main(int argc, char** argv)
   ros::init(argc, argv, "keyboard");
   ros::NodeHandle n("~");
 
-  ros::Publisher pub_down = n.advertise<keyboard::Key>("keydown", 10);
-  ros::Publisher pub_up = n.advertise<keyboard::Key>("keyup", 10);
+  ros::Publisher pub_down = n.advertise<keyboard::Key>("keyboard/keydown", 10);
+  ros::Publisher pub_up = n.advertise<keyboard::Key>("keyboard/keyup", 10);
 
   bool allow_repeat=false;
   int repeat_delay, repeat_interval;
