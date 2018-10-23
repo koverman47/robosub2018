@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 
-import rospy, math
-from datetime import datetime # not used
+import rospy
+import math
+
 from robosub2018.msg import Key
 from robosub2018.msg import MotorCommands
-from std_msgs.msg import Bool # not used
 
 
 '''
@@ -25,7 +25,7 @@ com_pub = None
 
 com_msg = None
 
-command_timeout = None
+command_timeout = dict()
 timeout_delay = 200
 
 power = 1
@@ -53,6 +53,7 @@ key_mappings = {119:    {0: 1, 1: -1},   # w - forward
 
 
 def user_input(key, down):
+    global command_timeout
     
     key = int(key.code)
 
@@ -90,7 +91,7 @@ def send_commands():
 
 
 def main():
-    global com_msg
+    global com_msg, com_pub, command_timeout
 
     rospy.init_node('UserInput')
     rospy.Subscriber("keyboard/keydown", Key, key_down)
