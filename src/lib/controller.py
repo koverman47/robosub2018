@@ -76,7 +76,6 @@ class Controller():
         return commands
 
 
-
     def get_derivative(self):
         derivative = matrix.recursive_vector_sum(self.errors, min(self.max_recursion, len(self.errors)))
         time = 1.0 / min(self.max_recursion, len(self.errors))
