@@ -15,7 +15,7 @@ def portdetect():
     flag = 0
     while flag == 0:
         try:
-            tim.sleep(0.01)
+            time.sleep(0.01)
             port = port + str(p)
             serimu = serial.Serial(port,baudrate=115200)
             t = time()
